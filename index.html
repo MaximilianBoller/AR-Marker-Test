@@ -162,12 +162,12 @@ function initialize()
 	
 	new THREE.MTLLoader()
 		.setPath( 'models/' )
-		.load( 'pages.mtl', function ( materials ) {
+		.load( 'world.mtl', function ( materials ) {
 			materials.preload();
 			new THREE.OBJLoader()
 				.setMaterials( materials )
 				.setPath( 'models/' )
-				.load( 'pages.obj', function ( group ) {
+				.load( 'world.obj', function ( group ) {
 					mesh0 = group.children[0];
 					mesh0.material.side = THREE.DoubleSide;
 					mesh0.position.y = 0;
